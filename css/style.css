@@ -1,0 +1,352 @@
+:root {
+  --main-color: #00B9FE;
+  --verde: #024959;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  background-color: #ebfafce4;
+}
+a{
+    text-decoration: none;
+}
+.containe-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  transform: translate(-50%, -50%);
+  height: 350px;
+  background-color: var(--main-color);
+  display: flex;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 0 30px #919191ae;
+}
+.left {
+  width: 250px;
+  height: 100%;
+  background-color: var(--main-color);
+  border-radius: 20px 0px 0px 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255) !important;
+  padding: 20px;
+  font-weight: 600;
+}
+.left p {
+  position: absolute;
+  bottom: 0;
+  font-size: .7em;
+}
+.right {
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px 20px 20px 20px;
+  animation: slideRight 1s forwards;
+  padding: 20px;
+}
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  width: 100%;
+  border-bottom: 1px solid var(--main-color);
+}
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: var(--main-color);
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.inputbox input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+  font-size: .8em;
+}
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: var(--main-color);
+}
+.inputbox i {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  top: 20px;
+  color: var(--main-color)
+}
+.right input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.right input[type="submit"]:hover {
+  background-color: #fff;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+@keyframes slideRight {
+  from {
+    left: -100%; /* El div comienza fuera de la pantalla a la izquierda */
+  }
+  to {
+    left: 0; /* Al final de la animación, el div estará en su posición final */
+  }
+}
+.globo {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  left: 50%;
+  transform: translate(-50%);
+}
+/*menu*/
+header {
+	width:100%;
+  position: relative;
+}
+
+header nav {
+  width: 100%;
+	max-width: 2000px;
+	background: var(--verde);
+	position: relative; /* Agregamos posición relativa al nav */
+	z-index: 9999;
+}
+
+.menu_bar {
+	display:none;
+}
+.logo {
+  position: absolute;
+  color: white !important;
+  top: 8px;
+  right: 10px;
+}
+.logo a {
+  color: white !important;
+  text-decoration: none;
+}
+header nav ul {
+	list-style:none;
+	overflow:hidden;
+}
+
+header nav ul li {
+	float: left;
+}
+
+header nav ul li i {
+	margin-right:10px;
+}
+
+header nav ul li a{
+	display:block;
+	padding:20px;
+	color:#fff;
+	text-decoration:none;
+}
+
+header nav ul li a:hover {
+	background:#037E8C;
+}
+
+section {	
+	margin: auto;
+	max-width:940px;
+	padding: 20px;
+	background: #C6d5c5;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.informes{
+    
+}
+
+@media screen and (max-width:800px) {
+	header nav {
+		width:80%;
+		height:100%;
+		margin:0;
+		position: fixed;
+		left:-100%;
+		/*top:0px;*/
+		overflow:auto;
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#ccc;
+	}
+
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+		background: var(--verde);
+		overflow: hidden;
+		font-size:25px;
+		font-weight:bold;
+		color:#fff;
+		text-decoration:none;
+	}
+
+	.menu_bar i {
+		float:right;
+		font-size:40px;
+	}
+
+	header nav ul li {
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255,.3);
+	}
+}
+/*fin menu*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-div, .right-div {
+  height: auto; /* Ajusta la altura según tus necesidades */
+  min-height: 650px;
+  box-sizing: border-box;
+}
+
+.left-div {
+  width: 50%;
+  padding: 20px;
+}
+
+.right-div {
+  width: 50%;
+  padding: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .left-div, .right-div {
+    width: 100%;
+  }
+}
+.entrada {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 620px;
+  padding: 10px;
+  background-color: var(--verde);
+  color: white;
+}
+.salida {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 620px;
+  padding: 10px;
+  background-color: var(--verde);
+  color: white;
+}
+.othe {
+  border: 1px solid #fff;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+.graficoDisponibilidad{
+  position: absolute;
+  left: 400px;
+  top: 20px;
+  width: 100px;
+  height: 100px;
+}
+#result{
+    position: relative;
+    top: 30px;
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    padding: 10px;
+    padding: 10px;
+}
+.tabla{
+
+    box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+
+    padding: 10px; border-collapse: collapse; border-spacing: 4px;
+
+    }
+/*informacion*/
+.containerDIV {
+    display: flex;
+    padding: 10px;
+  }
+.child {
+    flex-basis: 50%;
+    height: auto;
+    max-height: 600px;
+  }
+  
+  @media (max-width: 900px) {
+    .containerDIV {
+      flex-direction: column;
+    }
+  }
+/*fin informacion*/
+/*ingreso manual*/
+.containerIngreso{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    width: 600px;
+}
+/*fin ingreso manual*/
+/* cliemntes*/
+.clientes{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: var(--verde);
+    padding: 20px;
+    width: 600px;
+    height: 450px;
+}
+#clie{
+    color: white;
+}
+#clie p{
+    display: none;
+    color: rgb(255, 3, 3);
+}
+.error {
+    color: red;
+  }
+/* fin clientes*/

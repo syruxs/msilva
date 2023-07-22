@@ -1,0 +1,21 @@
+{
+    "name": "danie/msilva",
+    "description": "sistema para cobro en parqueadero",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Danie\\Msilva\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "syruxs",
+            "email": "daniel@ugalde.cl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "mike42/escpos-php": "^2.2"
+    }
+}
